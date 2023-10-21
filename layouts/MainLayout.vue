@@ -135,7 +135,10 @@
   <Footer v-if="!userStore.isLoading"/>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+import {useUserStore} from "~/stores/user.js";
+const userStore = useUserStore()
+
 let isAccountMenu = ref(false)
 let isCartHover = ref(false)
 let isSearching = ref(false)
