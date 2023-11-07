@@ -64,7 +64,6 @@
 import {useUserStore} from "~/stores/user.js";
 // import {useSupabaseClient} from "@nuxtjs/supabase/dist/runtime/composables/useSupabaseClient.js";
 // import {useSupabaseUser} from "@nuxtjs/supabase/dist/runtime/composables/useSupabaseUser.js";
-// import {re} from "prisma/build/child.js";
 
 const userStore = useUserStore()
 

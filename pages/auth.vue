@@ -27,21 +27,20 @@
 </template>
 
 <script setup>
-// import {useSupabaseClient} from "@nuxtjs/supabase/dist/runtime/composables/useSupabaseClient.js";
-// import {re} from "prisma/build/child.js";
 
-// const client = useSupabaseClient()
-// const user = useSupabaseClient()
-//
-// watchEffect(()=>{
-//   if (user.value){
-//     return navigateTo('/')
-//   }
-// })
+const client = useSupabaseClient()
+const user = useSupabaseUser()
 
-const login = async (provider) =>{
-  const { data,error} = await client.auth.sinnInWithOAuth({
-    provider: provider
+watchEffect(()=>{
+  console.log(user)
+  if (user.value){
+    return navigateTo('/')
+  }
+})
+
+const login = async (prov) =>{
+  const { data,error} = await client.auth.signInWithOAuth({
+    provider: prov
   })
 }
 </script>
