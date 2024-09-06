@@ -1,75 +1,25 @@
-# Nuxt 3 Minimal Starter
+App Setup
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+1.-  ```cp .env.example .env```
 
-## Setup
+2.- ```npm i```
 
-Make sure to install the dependencies:
+3.- ```npx prisma generate```
 
-```bash
-# npm
-npm install
+4.- ```npm run dev```
 
-# pnpm
-pnpm install
+You'll have to setup a Supabase account & Stripe account, then add all of the details in to your .env file.
 
-# yarn
-yarn install
+Once you've connected your application to Supabase. You'll also need to setup the Auth Providers: Google Google Github Github
 
-# bun
-bun install
+```
+https://supabase.com/docs/guides/auth/social-login/auth-google
+https://supabase.com/docs/guides/auth/social-login/auth-github
 ```
 
-## Development Server
+Now run the command to migrate your database tables and run your seed file.
 
-Start the development server on `http://localhost:3000`:
 
-```bash
-# npm
-npm run dev
+5.- ```npx prisma migrate dev --name init```
 
-# pnpm
-pnpm run dev
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
